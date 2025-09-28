@@ -82,9 +82,8 @@ router.delete("/:messageId", async (req, res) => {
 
   await messagesModel.destroy({where : {id : messageId}});
 
-  return res.status(200).send({
-    message : "Mensagem deletada"
-  });
+  return res.status(204).send(
+    );
 });
 
 export default router;
